@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<view class="top-search">
+  <icon type="search" class="search-img" size="13" color="#808080"></icon>
+  <input type='text' placeholder-class='search-holder' placeholder='搜索感兴趣的店家' value='' class=" pull-left" />
+  <div class=" pull-right text-right">搜索</div>
+</view>
+<view class="index-banner">
+  <image wx:if="{{banner.length==0}}" src='/pages/res/index_banner.jpg' mode='scaleToFill'></image>
+  <swiper wx:if="{{banner.length>0}}" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <block wx:for="{{banner}}" wx:key="item">
+      <swiper-item>
+        <image src='{{item.filePath}}' mode='scaleToFill'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="pull-left index-tap-l text-right {{tab=='left'?'current':''}}" bindtap='queryShopsCollectionList'>今日特卖</view>
+<view class="pull-left index-tap-r text-left {{tab=='right'?'current':''}}" bindtap='queryShopsByMyColl'>我关注的店</view>
+<view class='border'></view>
+<view class="index-shop-list">
+  <view class='index-shop-list-item' wx:for="{{goodsArr}}" wx:key="item">
+    <view class="container">
+      <view class="row">
+        <view class="col-xs-5 text-left  d-name" data-deptid='{{item.deptId}}' bindtap='shopsDetail'>{{item.name}}></view>
+        <view class="col-xs-3 shop-instance">{{item.distance|int}}m</view>
+        <view class="col-xs-4 text-right index-start-list">
+          <image mode='scaleToFill' src='/pages/res/start.jpg' mode='scaleToFill' wx:if="{{item.goodsLevel>=1}}"></image>
+          <image mode='scaleToFill' src='/pages/res/start.jpg' mode='scaleToFill' wx:if="{{item.goodsLevel>=2}}"></image>
+          <image mode='scaleToFill' src='/pages/res/start.jpg' mode='scaleToFill' wx:if="{{item.goodsLevel>=3}}"></image>
+          <image mode='scaleToFill' src='/pages/res/start.jpg' mode='scaleToFill' wx:if="{{item.goodsLevel>=4}}"></image>
+          <image mode='scaleToFill' src='/pages/res/start.jpg' mode='scaleToFill' wx:if="{{item.goodsLevel>=5}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class="goods-img-warpper text-left pull-left padding">
+      <image mode='scaleToFill' class="index-goods-img" src='{{item.goodsPics[0]}}' mode='scaleToFill' data-goodid='{{item.goodsId}}' bindtap='goodsDetail'></image>
+    </view>
+    <view class="goods-info-warpper pull-left" data-goodid='{{item.goodsId}}' bindtap='goodsDetail'>
+      <view class="goods-name">【限量{{item.limitedQuantity}}件】{{item.goodsName}}</view>
+      <view class="goods-desc">{{item.goodsDescribe}}</view>
+      <view class="goods-item-act">
+        <image mode='scaleToFill' class="index-goods-down_price pull-left" src='/pages/res/down_price.jpg' mode='scaleToFill'></image>
+        <view class="index-goods-price pull-left text-center">
+          <text>￥{{item.price}}</text> ￥{{item.groupPrice}}</view>
+        <view class="index-goods-buy pull-right text-center" data-deptid='99'>去拼单</view>
+      </view>
+    </view>
+  </view>
+  <view class='shopFooter'>没有更多的特卖展示了，敬请期待明日更新~</view>
+</view>

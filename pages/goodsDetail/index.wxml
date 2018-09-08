@@ -1,0 +1,143 @@
+<view class="goods-img">
+  <!-- <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000"> -->
+  <block wx:for="{{goodInfo.goodsPics}}" wx:key="item">
+    <!-- <swiper-item> -->
+    <image src='{{item}}' mode='aspectFill'></image>
+    <!-- </swiper-item> -->
+  </block>
+  <!-- </swiper> -->
+</view>
+<view class="times-wrapper">
+  <view class="pull-left tw-l">
+    <image src='/pages/res/pingdan.jpg' mode='scaleToFill'></image>
+  </view>
+  <!-- <view class="pull-left tw-m">超低底价·到店抢购</view> -->
+  <view class="pull-left tw-m">限时火拼·超低底价</view>
+  <!-- <view class="pull-right tw-r">
+    <view class="text1">活动时间</view>
+    <view class="text2">{{goodInfo.startDate}} - {{goodInfo.endDate}}</view>
+  </view> -->
+</view>
+<view class="goods-title-wrapper">
+<!-- 【限量{{goodInfo.limitedQuantity}}件】 -->
+  <view class="pull-left goods-name">{{goodInfo.goodsName}}</view>
+  <view class="pull-right goods-share" bindtap='shareFunc'>分享获币</view>
+</view>
+<view class="goods-price-wrapper">
+  <view class='goods-time'>
+    <text>活动时间</text>{{goodInfo.startDate}} - {{goodInfo.endDate}}
+  </view>
+  <view class='goods-count'><text>限量</text>仅限{{goodInfo.limitedQuantity}}件</view>
+  <view class="goods-price">¥{{goodInfo.groupPrice}}
+    <view>￥{{goodInfo.price}}</view>
+    <!-- <image mode='scaleToFill' class="price" src='/pages/res/down_price.jpg' mode='scaleToFill'></image> -->
+  </view>
+  <!--
+  <view class=" goods-prece-desc">
+    <view class="text1">2人拼单</view>
+    <view class="text1">拼单立省¥1500</view>
+    <view class="text2">只支持微信支付</view>
+  </view>-->
+</view>
+<!--
+<view class='gray-line'></view>
+<!--
+<view class="container pd-wrapper">
+  <view class="row">
+    <view class="col-xs-6 text1">18人在拼单</view>
+    <view class="col-xs-6 text2">查看更多></view>
+  </view>
+</view>
+
+<view class="container pd-list-wrapper">
+
+ <view class="row">
+    <view class="col-xs-5 text1">
+      <image src="/pages/res/user-demo.jpg"></image>用户名称</view>
+    <view class="col-xs-7 text2">
+      <view class="box1 pull-left">
+        还差
+        <text class="text-red">1</text>人拼成
+        <view class="box3">剩余23:55:40.0</view>
+      </view>
+      <view class="box2 pull-right" bindtap='showPD'>去拼单</view>
+    </view>
+  </view>
+
+</view>
+<view class="container pd-list-wrapper">
+  <view class="row">
+    <view class="col-xs-5 text1">
+      <image src="/pages/res/user-demo.jpg"></image>用户名称</view>
+    <view class="col-xs-7 text2">
+      <view class="box1 pull-left">
+        还差
+        <text class="text-red">1</text>人拼成
+        <view class="box3">剩余23:55:40.0</view>
+      </view>
+      <view class="box2 pull-right" bindtap='showPD'>去拼单</view>
+    </view>
+  </view>
+</view>
+-->
+<view class='gray-line'></view>
+<view class="container shop-name-wrapper">
+  <view class="row">
+    <view class="col-xs-6 text1" data-deptid='{{goodInfo.deptId}}' bindtap='shopsDetail'>
+      <image class="pull-left" src="/pages/res/shop_ico.jpg"></image>{{goodInfo.deptName}}</view>
+    <view class="col-xs-6 text2 text-right" data-deptid='{{goodInfo.deptId}}' bindtap='shopsDetail'>进店看看 ></view>
+  </view>
+</view>
+<view class='gray-line'></view>
+<view class='goods-details-content'>
+  <view class="goods-details-content-box1">商品详情</view>
+  <view class="goods-details-content-box2">{{goodInfo.goodsDescribe}}</view>
+</view>
+
+<!-- <image src="/pages/res/goods.jpg" style="width:750rpx;height:1430rpx;" class='goods-img-demo'></image> -->
+<image style='width: 100%;' wx:for="{{goodInfo.goodsPics}}" wx:key="item+1" src="{{item}}" class='goods-img-demo'></image>
+<view class="bottom-btns">
+
+  <view class="box1" bindtap='toIndex'>
+    <image src="/pages/res/bottom-btn.png"></image>
+  </view>
+  <view class="box2">
+    <image src="/pages/res/bottom-btn-2.png"></image>
+  </view>
+  <view class="box3" data-phone='0793-8291102' bindtap='makeCall'>
+    <image src="/pages/res/bottom-btn-3.png"></image>
+  </view>
+  <!--
+  <view class="box4 text-center">
+    <view>¥2000</view>
+    <view>单独购买</view>
+  </view>
+  <view class="box5 text-center">
+    <view>¥200</view>
+    <view>发起拼单</view>
+  </view>-->
+</view>
+<!-- 蒙版 -->
+<block wx:if="{{showMask}}">
+  <view class='pd_mask'>
+    <view class='pd_block'>
+      <icon class='close_btn_icon' type='clear' size='30' color='rgba(255,255,255,0.8)' bindtap='closeMask' />
+      <view class='pd_tit'>参与xxxx的拼单</view>
+      <view class='pd_limit'>
+        仅剩
+        <text class='font_red'>1</text>个名额
+        <text>23:12:12</text>后结束
+      </view>
+      <view class='flex_block lists_left'>
+        <view class='leader pd_img_con'>
+          <view class='pd_leader'>拼主</view>
+          <image mode='widthFix' class='h_img' src='../res/tea.png'></image>
+        </view>
+        <view class='leader pd_img_con'>
+          <image mode='widthFix' class='h_img' src='../res/tea.png'></image>
+        </view>
+      </view>
+      <view class='join'>参与拼单</view>
+    </view>
+  </view>
+</block>

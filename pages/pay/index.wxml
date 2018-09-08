@@ -1,0 +1,52 @@
+<!--pages/pay/index.wxml-->
+<view class='container'>
+  <view class='shop_item'>
+    <view class='flex_block goods_shop_info'>
+      <image class='shop_icon' src='../res/tea.png'></image>
+      <text class='shop_name_text'>八马茶业新正街店 ></text>
+    </view>
+    <view class='flex_block shop_item_change_css'>
+      <view class='shop_left'>
+        <view class='flex_block shop_img_info'>
+          <image class='shop_item_img' mode='widthFix' src='../res/tea.png'></image>
+          <view class='shop_info'>
+            <text class='shop_name'>【八马茶叶】八马茶业 如意大红袍 56克武夷岩茶礼品礼盒</text>
+          </view>
+        </view>
+      </view>
+      <view class='shop_right' bindtap='toManagement'>
+        <view class='buy_iofo'>
+          <text class='price'>¥100</text>
+          <text class='count'>×1</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 购买数量 -->
+  <view class='flex_block buy_count'>
+    <text class='font30'>购买数量</text>
+    <view class='flex_block count_con'>
+      <image src='../res/jian.png'></image>
+      <text class='count_number'>1</text>
+      <image src='../res/jia.png'></image>
+    </view>
+  </view>
+  <!-- 信息 -->
+  <view class='pay_info'>
+    <view class='flex_block pay_info_item'>
+      <text class='font30'>订单编号</text>
+      <text class='font30'>SH20188803</text>
+    </view>
+    <view class='flex_block pay_info_item'>
+      <text class='font30'>支付金额</text>
+      <text class='font30 font_red'>¥500</text>
+    </view>
+    <view class='flex_block pay_info_item'>
+      <text class='font30'>付款方式</text>
+      <text class='font30'>微信</text>
+    </view>
+  </view>
+  <!-- 支付 -->
+  <view class='pay_btn'>确认支付</view>
+  <view class='pay_tips_t'>全场商品均需线下自提，如需快递，请自行联系商家安排。</view>
+</view>

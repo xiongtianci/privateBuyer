@@ -1,0 +1,65 @@
+<!--pages/refund/index.wxml-->
+<view class='container'>
+  <view class='shop_item'>
+    <view class='item_title'>退款商品</view>
+    <view class='flex_block shop_item_change_css'>
+      <view class='shop_left'>
+        <view class='flex_block shop_img_info'>
+          <image class='shop_item_img' mode='widthFix' src='../res/h_img.png'></image>
+          <view class='shop_info'>
+            <text class='shop_name'>【八马茶叶】八马茶业 如意大红袍  56克武夷岩茶礼品礼盒包邮</text>
+          </view>
+        </view>
+      </view>
+      <view class='shop_right' bindtap='toManagement'>
+        <view class='buy_iofo'>
+          <text class='price'>¥500</text>
+          <text class='count'>×1</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 操作选择 -->
+  <view class='tk_con'>
+    <view class='flex_block tk_con_item' bindtap='ToApplyTK'>
+      <view class='flex_block tk_item'>
+        <image class='item_icon' src='../res/tuikuan.png'></image>
+        <view class='text_con'>
+          <text class='h_tit'>仅退款</text>
+          <text class='h_text'>未提货，或卖家协商以前提下</text>
+        </view>
+      </view>
+      <image class='arrows_right' src='../res/arrows.png'></image>
+    </view>
+
+    <view class='flex_block tk_con_item' bindtap='ToApplyTK'>
+      <view class='flex_block tk_item'>
+        <image class='item_icon' src='../res/tui.png'></image>
+        <view class='text_con'>
+          <text class='h_tit'>退货退款</text>
+          <text class='h_text'>已提货，需要退换已收到的货物</text>
+        </view>
+      </view>
+      <image class='arrows_right' src='../res/arrows.png'></image>
+    </view>
+
+    <view class='flex_block tk_con_item' bindtap='ToApplyTK'>
+      <view class='flex_block tk_item'>
+        <image class='item_icon' src='../res/huan.png'></image>
+        <view class='text_con'>
+          <text class='h_tit'>换货</text>
+          <text class='h_text'>已提货，需要更换已收到的货物</text>
+        </view>
+      </view>
+      <image class='arrows_right' src='../res/arrows.png'></image>
+    </view>
+  </view>
+  <!-- 重要提示 -->
+  <view class='tips_block'>
+    <view class='tips_tit'>重要提示:</view>
+    <view class='apply_jr'>
+      <text class='apply_tips'>您还可以主动联系卖家，要求尽快处理退款。 如双方未能协商一致，您可以</text>
+      <view class='apply_btn'>申请介入</view>
+    </view>
+  </view>
+</view>

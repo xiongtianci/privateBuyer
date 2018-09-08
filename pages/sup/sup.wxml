@@ -1,0 +1,4 @@
+<view class='container'>
+  <image class='img'   src='../res/back.png'></image>
+  <button class='btn' type="warn" open-type='getUserInfo' hover-class="none"  bindgetuserinfo='bindGetUserInfo' disabled='{{isTap}}'>开启我身边的找特卖之旅</button>
+</view>

@@ -1,0 +1,192 @@
+<!--pages/order/index.wxml-->
+<view class='container'>
+  <view class="flex_block swiper-tab">
+    <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>
+    <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">已付款</view>
+    <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">已提货</view>
+    <view class="tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">已取消</view>
+    <view class="tab-item {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">退款/售后</view>
+  </view>
+  <swiper current="{{currentTab}}" class="swiper" duration="200" style="height:{{winHeight - 45}}px" bindchange="bindChange">
+    <swiper-item>
+      <!-- 全部 -->
+      <view class='order_item'>
+        <block wx-if="{{AllOrder.length == 0}}">
+          <text class='no_shop'>暂无订单</text>
+        </block>
+        <block wx-if="{{AllOrder.length != 0}}">
+          <view class='shop_item' wx:for="{{AllOrder}}" wx:key="items" wx:for-item="i">
+            <view class='flex_block shop_item_change_css'>
+              <view class='shop_left'>
+                <view class='flex_block shop_img_info'>
+                  <image class='shop_item_img' mode='scaleToFill' src='{{i.imgSrc}}'></image>
+                  <view class='shop_info'>
+                    <text class='shop_name'>【{{i.shopName}}】{{i.name}}</text>
+                  </view>
+                </view>
+              </view>
+              <view class='shop_right' bindtap='toManagement'>
+                <view class='buy_iofo'>
+                  <text class='price'>¥{{i.price}}</text>
+                  <text class='original_price'>¥{{i.original_price}}</text>
+                  <text class='count'>×{{i.count}}</text>
+                </view>
+              </view>
+            </view>
+            <!-- 订单处理 -->
+            <view class='flex_block cancel_con'>
+              <view class='thm_btn' bindtap='thCrod'>提货码</view>
+              <view class='cancel_btn' bindtap='cancelOrder'>取消订单</view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <!-- 已付款 -->
+      <view class='order_item'>
+        <block wx-if="{{HvaePay.length == 0}}">
+          <text class='no_shop'>暂无此类订单</text>
+        </block>
+        <block wx-if="{{HvaePay.length != 0}}">
+          <view class='shop_item' wx:for="{{HvaePay}}" wx:key="items" wx:for-item="i">
+            <view class='flex_block shop_item_change_css'>
+              <view class='shop_left'>
+                <view class='flex_block shop_img_info'>
+                  <image class='shop_item_img' mode='scaleToFill' src='{{i.imgSrc}}'></image>
+                  <view class='shop_info'>
+                    <text class='shop_name'>【{{i.shopName}}】{{i.name}}</text>
+                  </view>
+                </view>
+              </view>
+              <view class='shop_right' bindtap='toManagement'>
+                <view class='buy_iofo'>
+                  <text class='price'>¥{{i.price}}</text>
+                  <text class='original_price'>¥{{i.original_price}}</text>
+                  <text class='count'>×{{i.count}}</text>
+                </view>
+              </view>
+            </view>
+            <!-- 订单处理 -->
+            <view class='flex_block cancel_con'>
+              <view class='thm_btn' bindtap='thCrod'>提货码</view>
+              <view class='cancel_btn' bindtap='cancelOrder'>取消订单</view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <!-- 已提货 -->
+      <view class='order_item'>
+        <block wx-if="{{HavedTake.length == 0}}">
+          <text class='no_shop'>暂无此类订单</text>
+        </block>
+        <block wx-if="{{HavedTake.length != 0}}">
+          <view class='shop_item' wx:for="{{HavedTake}}" wx:key="items" wx:for-item="i">
+            <view class='flex_block shop_item_change_css'>
+              <view class='shop_left'>
+                <view class='flex_block shop_img_info'>
+                  <image class='shop_item_img' mode='scaleToFill' src='{{i.imgSrc}}'></image>
+                  <view class='shop_info'>
+                    <text class='shop_name'>【{{i.shopName}}】{{i.name}}</text>
+                  </view>
+                </view>
+              </view>
+              <view class='shop_right' bindtap='toManagement'>
+                <view class='buy_iofo'>
+                  <text class='price'>¥{{i.price}}</text>
+                  <text class='original_price'>¥{{i.original_price}}</text>
+                  <text class='count'>×{{i.count}}</text>
+                </view>
+              </view>
+            </view>
+            <!-- 订单处理 -->
+            <view class='flex_block cancel_con'>
+              <view class='thm_btn' bindtap='thCrod'>提货码</view>
+              <view class='cancel_btn' bindtap='cancelOrder'>取消订单</view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <!-- 已取消 -->
+      <view class='order_item'>
+        <block wx-if="{{HavedCancel.length == 0}}">
+          <text class='no_shop'>暂无此类订单</text>
+        </block>
+        <block wx-if="{{HavedCancel.length != 0}}">
+          <view class='shop_item' wx:for="{{HavedCancel}}" wx:key="items" wx:for-item="i">
+            <view class='flex_block shop_item_change_css'>
+              <view class='shop_left'>
+                <view class='flex_block shop_img_info'>
+                  <image class='shop_item_img' mode='scaleToFill' src='{{i.imgSrc}}'></image>
+                  <view class='shop_info'>
+                    <text class='shop_name'>【{{i.shopName}}】{{i.name}}</text>
+                  </view>
+                </view>
+              </view>
+              <view class='shop_right' bindtap='toManagement'>
+                <view class='buy_iofo'>
+                  <text class='price'>¥{{i.price}}</text>
+                  <text class='original_price'>¥{{i.original_price}}</text>
+                  <text class='count'>×{{i.count}}</text>
+                </view>
+              </view>
+            </view>
+            <!-- 订单处理 -->
+            <block wx:if="{{!i.cancel_order}}">
+              <view class='flex_block cancel_con'>
+                <view class='thm_btn' bindtap='thCrod'>提货码</view>
+                <view class='cancel_btn' bindtap='cancelOrder'>取消订单</view>
+              </view>
+            </block>
+          </view>
+        </block>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <!-- 退款/售后 -->
+      <view class='order_item'>
+        <block wx-if="{{ReturngGoods.length == 0}}">
+          <text class='no_shop'>暂无此类订单</text>
+        </block>
+        <block wx-if="{{ReturngGoods.length != 0}}">
+          <view class='shop_item' wx:for="{{ReturngGoods}}" wx:key="items" wx:for-item="i">
+            <view class='flex_block goods_shop_info'>
+              <image class='shop_icon' src='../res/shop_ico.jpg'></image>
+              <text class='shop_name_text'>八马茶业新正街店></text>
+            </view>
+            <view class='flex_block shop_item_change_css'>
+              <view class='shop_left'>
+                <view class='flex_block shop_img_info'>
+                  <image class='shop_item_img' mode='scaleToFill' src='{{i.imgSrc}}'></image>
+                  <view class='shop_info'>
+                    <text class='shop_name'>【{{i.shopName}}】{{i.name}}</text>
+                  </view>
+                </view>
+              </view>
+              <view class='shop_right' bindtap='toManagement'>
+                <view class='buy_iofo'>
+                  <text class='price'>¥{{i.price}}</text>
+                  <text class='count'>×{{i.count}}</text>
+                </view>
+              </view>
+            </view>
+            <!-- 订单处理 -->
+            <view class='flex_block cancel_con_shouhou'>
+              <view class='flex_block tk_item'>
+                <image class='item_icon' src='../res/tuikuan.png'></image>
+                <view class='text_con'>
+                  <text class='h_tit'>仅退款</text>
+                </view>
+              </view>
+              <view class='cancel_btn' bindtap='checkDetail'>查看详情</view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

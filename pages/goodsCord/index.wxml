@@ -1,0 +1,18 @@
+<!--pages/goodsCord/index.wxml-->
+<view class='container'>
+  <view class="qr_cord_con">
+    <view class='flex_block info_con'>
+      <view class='user_h_img'>
+        <image mode='widthFix' src='../res/h_img.png'></image>
+      </view>
+      <view>
+        <view class='user_name'>宁静致远</view>
+        <view class='user_id'>id：123456</view>
+      </view>
+    </view>
+    <image class='qr_cord' mode='widthFix' src='../res/qr_cord.png'></image>
+    <text class='tips'>有效期2小时,请尽快提货</text>
+    <text class='tips'>如逾期未提货，7个工作日内将原路退款</text>
+  </view>
+  <view class='share_btn'>分享</view>
+</view>

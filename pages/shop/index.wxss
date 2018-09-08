@@ -1,0 +1,138 @@
+.shop-img image {
+  width: 750rpx;
+  height: 400rpx;
+}
+
+.shop-info {
+  margin: 20rpx;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+  padding-bottom: 20rpx;
+}
+
+.shop-info .shop-title {
+  font-size: 32rpx;
+}
+
+.shop-info  .shop-info-box1 {
+  font-size: 15px;
+  color: #333;
+  margin-top: 15rpx;
+}
+
+.shop-info  .shop-info-box2 {
+  margin-top: 15rpx;
+  font-size: 12px;
+  color: #333;
+}
+
+.shop-info  .shop-info-box2 image {
+  width: 17rpx;
+  height: 23rpx;
+  display: inline-block;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.shop-info .index-start-list image {
+  float: left;
+  width: 23rpx;
+  height: 23rpx;
+  margin-top: 15rpx;
+}
+
+.shop-act {
+  height: 74rpx;
+  padding: 0 20rpx;
+}
+
+.shop-act image {
+  width: 177rpx;
+  height: 74rpx;
+}
+.index-shop-list{
+ 
+margin-top:20rpx;
+overflow: hidden;
+  clear: both;
+}
+.index-shop-list-item{
+  margin-top:20rpx;
+ overflow: hidden;
+  clear: both;
+}
+.shop-name,.shop-instance{
+font-size: 12px;
+}
+.index-start-list image{
+  float: left;
+  width: 23rpx;
+   height: 23rpx;
+   margin-left: 5rpx;
+   margin-top: 10rpx;
+}
+
+.goods-img-warpper {
+  width: 300rpx;
+  text-align: center;
+  /* height: 180rpx; */
+}
+.goods-info-warpper{
+  /* width:510rpx; */
+  width: 450rpx;
+}
+.index-goods-img{
+  width: 240rpx;
+  height: 180rpx;
+}
+.goods-name{
+  font-size:13px!important ;
+  padding-right: 30rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.goods-desc{
+  color: #333;
+  font-size:12px!important ;
+  padding-right: 30rpx;
+  margin-left: 6px;
+  margin-top: 20rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.goods-item-act{
+  margin-top: 20rpx;
+}
+
+.index-goods-down_price{
+  width: 80rpx;
+  height: 69rpx;
+  margin-left: 10rpx;
+}
+.index-goods-price{
+  width: 190rpx;
+  color:  #ef4836;
+  font-size: 15px;
+  line-height:34px;
+  margin-left: 10rpx;
+  text-align: left;
+}
+.index-goods-price text{
+   color:  #bfbfbf;
+  font-size: 12px;
+  text-decoration: line-through;
+} 
+.index-goods-buy{
+font-size: 12px;
+ width: 120rpx;
+ height: 60rpx;
+ padding: 0 20rpx;
+ line-height: 60rpx;
+ border-radius: 4px;
+ background: #ef4836;
+ color: #fff;
+ margin-right: 20rpx;
+}

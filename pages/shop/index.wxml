@@ -1,0 +1,59 @@
+<view class="shop-img">
+ <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <block wx:for="{{shopInfo.storePics}}" wx:key="item">
+      <swiper-item>
+        <!-- <image src='{{item}}' mode='scaleToFill'></image> -->
+        <image src='{{item}}' mode='scaleToFill'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="shop-info">
+ <view class="shop-title">{{shopInfo.name}}</view>
+ <view class="shop-info-box1">{{shopInfo.describe}}</view>
+ <view class="shop-info-box2" bindtap='getAddress'>{{shopInfo.distance|int}}m | <image src='/pages/res/place.png' mode='scaleToFill'></image> {{shopInfo.address}} ></view>
+   <view class="text-left index-start-list">
+          <image mode='scaleToFill' src='/pages/res/start.jpg' mode='scaleToFill'></image>
+          <image mode='scaleToFill' src='/pages/res/start.jpg' mode='scaleToFill'></image>
+          <image mode='scaleToFill' src='/pages/res/start.jpg' mode='scaleToFill'></image>
+          <image mode='scaleToFill' src='/pages/res/start.jpg' mode='scaleToFill'></image>
+          <image mode='scaleToFill' src='/pages/res/start.jpg' mode='scaleToFill'></image>
+        </view>
+</view>
+<view class="shop-act">
+  <image mode='scaleToFill' src='/pages/res/shop-act1.jpg' mode='scaleToFill' data-deptid='{{shopInfo.deptId}}' bindtap='addCollection'></image>
+ <image mode='scaleToFill' src='/pages/res/shop-act2.jpg' mode='scaleToFill' open-type="share" bindtap='shareview'></image>
+  <image mode='scaleToFill' src='/pages/res/shop-act3.jpg' mode='scaleToFill' bindtap='makeCall'></image>
+   <image mode='scaleToFill' src='/pages/res/shop-act4.jpg' mode='scaleToFill' bindtap='toIndex'></image>
+</view>
+<view class='gray-line'></view>
+<view class="index-shop-list">
+  <view class='index-shop-list-item' wx:for = "{{goodsArr}}" wx:key="item">
+    <!-- <view class="container">
+      <view class="row">
+        <view class="col-xs-5 text-left shop-name">马茶叶新正街店></view>
+        <view class="col-xs-3 text-center shop-instance">666m</view>
+        <view class="col-xs-4 text-right index-start-list">
+          <image mode='scaleToFill' src='/pages/res/start.jpg' mode='scaleToFill'></image>
+          <image mode='scaleToFill' src='/pages/res/start.jpg' mode='scaleToFill'></image>
+          <image mode='scaleToFill' src='/pages/res/start.jpg' mode='scaleToFill'></image>
+          <image mode='scaleToFill' src='/pages/res/start.jpg' mode='scaleToFill'></image>
+          <image mode='scaleToFill' src='/pages/res/start.jpg' mode='scaleToFill'></image>
+        </view>
+      </view>
+    </view> -->
+    <view class="goods-img-warpper text-left pull-left">
+      <image mode='scaleToFill' class="index-goods-img" src='{{item.goodsImg}}' mode='scaleToFill' data-goodid='{{item.goodsId}}' bindtap='goodsDetail'></image>
+    </view>
+    <view class="goods-info-warpper pull-left" data-goodid='{{item.goodsId}}' bindtap='goodsDetail'>
+      <view class="goods-name">【限量{{item.limitedQuantity}}件】{{item.goodsName}}</view>
+      <view class="goods-desc">{{item.goodsDescribe}}</view>
+      <view class="goods-item-act">
+      <image mode='scaleToFill' class="index-goods-down_price pull-left" src='/pages/res/down_price.jpg' mode='scaleToFill'></image>
+      <view class="index-goods-price pull-left text-center"><text>￥{{item.price}}</text>    ￥{{item.groupPrice}}</view>
+       <view class="index-goods-buy pull-right text-center" bindtap='goodsDetail'>去拼单</view>
+      </view>
+    </view>
+  </view>
+</view>

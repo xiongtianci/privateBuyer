@@ -1,0 +1,52 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.2",
+	"appid": "wx5083d91c4d5c7fee",
+	"projectname": "%E4%B9%B0%E5%AE%B6%E7%89%88",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 1,
+					"name": "商品详情",
+					"pathName": "pages/goodsDetail/index",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "个人中心",
+					"pathName": "pages/me/index"
+				}
+			]
+		}
+	}
+}

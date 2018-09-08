@@ -1,0 +1,45 @@
+{
+
+ 
+  "pages": [
+    "pages/sup/sup",
+    "pages/index/index",
+    "pages/refund/index",
+    "pages/search/index",
+    "pages/goodsDetail/index",
+    "pages/pdPay/index",
+    "pages/pay/index",
+    "pages/tkFail/index",
+    "pages/tkDetail/index",
+    "pages/order/index",
+    "pages/applyTK/index",
+    "pages/goodsCord/index",
+    "pages/me/index",
+    "pages/shop/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ef4836",
+    "navigationBarTitleText": "找特卖",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/res/home.png",
+        "selectedIconPath": "pages/res/home_sel.png"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "个人中心 ",
+        "iconPath": "pages/res/me.png",
+        "selectedIconPath": "pages/res/me_sel.png"
+      }
+    ],
+    "color": "#707070",
+    "selectedColor": "#ef4836"
+  }
+}

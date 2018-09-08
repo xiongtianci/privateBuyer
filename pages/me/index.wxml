@@ -1,0 +1,40 @@
+<view class="me-top">
+  <view class="pull-left">
+    <image src='{{userinfo.avatarUrl}}' mode='scaleToFill'></image>
+  </view>
+  <text class='pull-right'>{{userinfo.nickName}}</text>
+  
+</view>
+<view class="me-middle">
+  <view>
+    <text class="text1">我的资产</text>
+    <image src='/pages/res/ztb.jpg' mode='scaleToFill'></image>
+    <text class="text-red text2">0</text>
+    <text class="text3">  找特币</text>
+  </view>
+  <view class="text4 text-red">资产兑换活动，即将到来，敬请期待。</view>
+</view>
+<view class='gray-line'></view>
+<view class="me-list">
+
+  <!--!<view class="item" bindtap='ToOrder'>
+    <image class="ico pull-left" src='/pages/res/me1.jpg' mode='scaleToFill'></image>
+    <text>我的订单</text>
+    <text class="pull-right text-right">></text>
+  </view>-->
+  <view class="item">
+    <image class="ico pull-left" src='/pages/res/me2.jpg' mode='scaleToFill'></image>
+    <text class='item-font'>我的收藏</text>
+    <text class="pull-right text-right">></text>
+  </view>
+  <view class="item" bindtap='makeCall'>
+    <image class="ico pull-left" src='/pages/res/me3.jpg' mode='scaleToFill'></image>
+    <text class='item-font'>联系客服</text>
+    <text class="pull-right text-right">></text>
+  </view>
+</view>
+<view class="be-seller text-center">
+  <navigator target = "miniProgram" app-id="wxb268e17280c77dc8" open-type='navigate'>
+    成为找特卖的商家
+  </navigator>
+</view>

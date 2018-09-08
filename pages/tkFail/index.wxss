@@ -1,0 +1,143 @@
+/* pages/tkDetail/index.wxss */
+page, .container{
+  background-color: #f6f6f6;
+}
+.container{
+  padding: 0rpx;
+}
+.shop_item{
+  box-sizing: border-box;
+  background-color: #fff;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  margin-top: 20rpx;
+}
+.title{
+  width: 100%;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #666;
+}
+.shop_img_info{
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.shop_item_img{
+  width: 138rpx;
+  height: 138rpx;
+  margin-left: 20rpx;
+}
+.shop_info{
+  margin-left: 20rpx;
+}
+.shop_name{
+  display: block;
+  width: 360rpx;
+  font-size: 24rpx;
+}
+
+.shop_item_change_css{
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+  margin-bottom: 25rpx;
+  border-top: 1rpx solid #ddd;
+  padding: 30rpx 20rpx;
+}
+
+.buy_iofo{
+  width: 100%;
+}
+.buy_iofo text{
+  display: block;
+  text-align: right;
+}
+.price{
+  font-size: 30rpx;
+  color: #ef4836;
+}
+.count{
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 5rpx;
+}
+/* ----------------- */
+.info_item{
+  width: 100%;
+  height: 88rpx;
+  padding: 0rpx 30rpx; 
+  box-sizing: border-box;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  font-size: 30rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #e8e8e8;
+}
+.flex_start{
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+}
+.info_item input{
+  width: 450rpx;
+  text-align: left;
+}
+.placeholder_class{
+  text-align: right;
+}
+.placeholder_class_left{
+  text-align: left;
+}
+.m_top_20{
+  margin-top: 20rpx;
+}
+/* ------------------------------ */
+.fail_con{
+  width: 100%;
+  background-color: #fff;
+  padding: 20rpx 0rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.fail_tips{
+  background-color: #fff;
+  padding: 20rpx 30rpx;
+  font-size: 26rpx;
+}
+.time_span{
+  color: #ef4836;
+}
+
+/* ------------------------- */
+.detail_info{
+  padding: 40rpx 20rpx;
+}
+.detail_info view{
+  font-size: 26rpx;
+  color: #999;
+}
+
+/* ------------------------- */
+.contact_con{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.contact_con_ttem{
+  padding: 30rpx 0rpx;
+  box-sizing: border-box;
+}
+
+.lx_icon{
+  display: block;
+  width: 31rpx;
+  height: 28rpx;
+}
+.lx_text{
+  font-size: 30rpx;
+  color: #666;
+  margin-left: 20rpx;
+}

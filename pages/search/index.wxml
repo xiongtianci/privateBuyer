@@ -1,0 +1,29 @@
+<!--pages/seach/index.wxml-->
+<view class='container'>
+  <view class='flex_block search_block'>
+    <view class='flex_block search_con'>
+      <image class='search_icon' src='../res/search_ico.png'></image>
+      <input class='search_input' placeholder='xxx店'></input>
+    </view>
+    <view class='search_text'>搜索</view>
+  </view>
+  <!-- 商铺 -->
+  <view class='result_con'>
+    <view class='flex_block result_item'>
+      <view class='flex_block shop_info'>
+        <image class='shop_pic' src='../res/tea.png'></image>
+        <view class='shop_name'>八马茶叶新正街店</view>
+      </view>
+      <view class='to_shop'>进店</view>
+    </view>
+    <view class='flex_block shop_img_con'>
+      <image class='shop_img' mode='widthFix' src='../res/bm.jpg'></image>
+      <image class='shop_img' mode='widthFix' src='../res/bm.jpg'></image>
+      <image class='shop_img' mode='widthFix' src='../res/bm.jpg'></image>
+    </view>
+    <view class='flex_block label_con'>
+      <view class='label'>收藏过的店</view>
+      <view class='label'>收藏人数265人</view>
+    </view>
+  </view>
+</view>

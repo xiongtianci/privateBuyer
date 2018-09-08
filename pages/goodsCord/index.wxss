@@ -1,0 +1,60 @@
+/* pages/goodsCord/index.wxss */
+page{
+  height: 100%;
+}
+.container{
+  height: 100%;
+  background-color: #f6f6f6;
+  padding-top: 70rpx;
+}
+.qr_cord_con{
+  width: 100%;
+  background: #fff;
+  padding: 30rpx 35rpx;
+  box-sizing: border-box;
+}
+.info_con{
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+}
+.info_con .user_h_img{
+  display: block;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 50rpx;
+}
+.info_con .user_h_img>image{
+  width: 100%;
+}
+.user_name{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.user_id{
+  font-size: 28rpx;
+  margin-top: 15rpx;
+}
+.qr_cord{
+  display: block;
+  width: 470rpx;
+  margin: 50rpx auto 30rpx;
+}
+.tips{
+  display: block;
+  font-size: 28rpx;
+  color: #333;
+  text-align: center;
+}
+.share_btn{
+  width: 285rpx;
+  height: 75rpx;
+  line-height: 75rpx;
+  background-color: #ef4836;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  margin: 60rpx auto;
+  border-radius: 8rpx;
+}

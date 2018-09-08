@@ -1,0 +1,90 @@
+.me-top {
+  height: 260rpx;
+  width: 100%;
+  overflow: hidden;
+  background: #f6f6f6;
+}
+
+.me-top .pull-left {
+  width: 100%;
+  text-align: center;
+  font-size: 40rpx;
+  line-height: 80rpx;
+}
+
+.me-top .pull-right {
+  width: 100%;
+  text-align: center;
+}
+
+.me-top .pull-left image {
+  height: 125rpx;
+  width: 125rpx;
+  margin-top: 35rpx;
+  border-radius: 100px;
+}
+
+.me-middle {
+  overflow: hidden;
+  padding: 40rpx 20rpx;
+  text-align: center;
+}
+
+.me-middle .text1 {
+  font-size: 40rpx;
+}
+
+.me-middle .text2 {
+  font-size: 40rpx;
+}
+
+.me-middle .text3 {
+  font-size: 26rpx;
+}
+
+.me-middle  .text4 {
+  font-size: 26rpx;
+  margin-left: 12px;
+}
+
+.me-middle image {
+  height: 36rpx;
+  width: 36rpx;
+  display: inline-block;
+  margin: 0 20rpx;
+}
+
+.me-list {
+  padding: 20rpx;
+}
+
+.me-list .item {
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 1px solid #dcdcdc;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.me-list .ico {
+  width: 60rpx;
+  height: 60rpx;
+  display: inline-block;
+  margin-top: 14rpx;
+  margin-right: 15rpx;
+}
+
+.me-list .pull-right {
+  font-size: 40rpx;
+  color: #666;
+}
+
+.be-seller {
+  height: 88rpx;
+  line-height: 88rpx;
+  width: 710rpx;
+  margin: 20rpx;
+  background: #ef4836;
+  border-radius: 10rpx;
+  color: #fff;
+}

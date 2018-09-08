@@ -1,0 +1,64 @@
+<!--pages/tkDetail/index.wxml-->
+<view class='container'>
+  <!-- 退款失败 -->
+  <view class='flex_block fail_con'>
+    <icon type='warn' color='#f43530' size='25'></icon>
+    <text class='font30'>退款失败，建议联系卖家或申请客服介入</text>
+  </view>
+  <view class='fail_tips'>若申请被拒绝，您可以尝试联系卖家或申请客服介入，若
+    <text class='time_span'>6</text>天
+    <text class='time_span'>23</text>时
+    <text class='time_span'>57</text>分
+    <text class='time_span'>10</text>秒内申请未处理，退款申请将达成并退至 您的微信账号中。</view>
+  <view class='shop_item'>
+    <view class='title'>
+      <text>退款信息</text>
+    </view>
+    <view class='flex_block shop_item_change_css'>
+      <view class='shop_left'>
+        <view class='flex_block shop_img_info'>
+          <image class='shop_item_img' mode='scaleToFill' src='{{TdInfo.imgSrc}}'></image>
+          <view class='shop_info'>
+            <text class='shop_name'>{{TdInfo.name}}</text>
+            <text class='shop_specifications'>{{TdInfo.specifications}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='shop_right' bindtap='toManagement'>
+        <view class='buy_iofo'>
+          <text class='price'>¥{{TdInfo.price}}</text>
+          <text class='count'>×{{TdInfo.count}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 详细信息 -->
+  <view class='detail_info'>
+    <view>操作时间：
+      <text>2018/07/04 23:39:02</text>
+    </view>
+    <view>退款申请：
+      <text>仅退款</text>
+    </view>
+    <view>货物状态：
+      <text>未提货</text>
+    </view>
+    <view>退款原因：
+      <text>不想要了</text>
+    </view>
+    <view>退款金额：
+      <text>500</text>
+    </view>
+  </view>
+  <!-- 联系卖家  客服 -->
+  <view class='flex_block contact_con'>
+    <view class='flex_block contact_con_ttem'>
+      <image class='lx_icon' src='../res/lxsj.png'></image>
+      <text class='lx_text'>联系卖家</text>
+    </view>
+    <view class='flex_block contact_con_ttem'>
+      <image class='lx_icon' src='../res/lxkf.png'></image>
+      <text class='lx_text'>联系客服</text>
+    </view>
+  </view>
+</view>
